@@ -18,7 +18,7 @@ Debe ser posible convertir una palabra para la versión encriptada también devo
 
 const text_area  =  document.querySelector(".mensaje");
 const receptor = document.querySelector(".receptor");
-
+const copiar = document.querySelector(".copiar")
 function encripta(encriptacion){ 
     let vocales = [["e","enter"],["i","imes"],["a","ai"],["o","ober"],["u","ufat"],]
     //console.log(vocales)
@@ -36,7 +36,8 @@ function btnencriptar(){
     receptor.value = text_encriptado;
     text_area.value = "";
     receptor.style.backgroundImage = "none";
- }
+    copiar.style.visibility="visible";
+}
 
 function desencripta(desencriptacion){ 
     let vocales = [["e","enter"],["i","imes"],["a","ai"],["o","ober"],["u","ufat"],]
@@ -56,12 +57,11 @@ function btndesencriptar(){
     text_area.value = text_encriptado;
     receptor.value = "";
     receptor.style.backgroundImage = "url(./Images/Muñeco.png)";
-
-}
+    copiar.style.visibility="visible";
 
 function copiarelemento(){
+    const texto = document.getElementsByClassName("receptor");
     if(text_area.value==""){
-        const texto = document.getElementsByClassName("receptor");
         texto[0].select();
         texto[0].setSelectionRange(0,99999);
         document.execCommand('copy');
@@ -71,6 +71,4 @@ function copiarelemento(){
         texto[0].setSelectionRange(0,99999);
         document.execCommand('copy');
     }
-
-
 }
