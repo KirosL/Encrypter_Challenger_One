@@ -12,6 +12,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/630c77ddc1.js" crossorigin="anonymous"></script>
     </head>
     <body>
 
@@ -24,7 +25,9 @@
             <section class="caja">
                 <textarea  cols="30" rows="10" placeholder="Ingrese el texto aquí" class="mensaje"></textarea>
                 <div>
-                    <h6 class="informacion">&#x24D8 Solo letras minúsculas y sin acentos</h6>
+                    <h6 class="informacion">
+                        <i class="fa-solid fa-circle-exclamation fa-sm" style="color: #004E2C;"></i>
+                        Solo letras minúsculas y sin acentos</h6>
                 </div>
                 <div class="botones">
                     <button class="boton_encriptar" onclick="btnencriptar()">Encriptar</button>
@@ -40,11 +43,35 @@
                 </div>
             </section>            
             <script src="./js/encriptador.js"></script>
-
-            <footer>
-
-            </footer>
-
         </main>
+        <footer class="pie_pagina">
+            <div class="grupo_1">
+                <div class="box"> 
+                    <figure>
+                        <a href="#">
+                            <img src="Assets/Images/Oracle-ONE.png" alt="Logo Oracle One">
+                        </a>
+                    </figure>
+                </div>
+                <div class="box">
+                    <h2>Sobre Mi</h2>
+                    <p>Andres Aranguren</p>
+                    <p>Estudainte de Alura Oracle One Next Education</p>
+                </div>
+                <div class="box"> 
+                    <h2>Redes Sociales</h2>
+                    <div class="red_social">
+                        <a  href="#" 
+                            class="fa-brands fa-square-facebook fa-2xl"></a>
+                        <a  href="https://www.linkedin.com/in/andres-aranguren-b758a3211"
+                            target="_blank"
+                            class="fa-brands fa-linkedin fa-2xl"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="grupo_2">
+                    <small> &copy; 2023 <b>Challenger One</b> - Todos los derechos reservados</small>
+            </div>
+        </footer>
     </body>
 </html>

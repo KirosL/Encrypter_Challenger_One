@@ -1,16 +1,23 @@
 /*NavBar*/
 *{
-    background: #FFF2FF;
     font-family: 'Inter';
     font-weight: 400;
     font-size: 32px;
     line-height: 150%;
+    background:#C2DDE1;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background: #9FBCBB;
 }
 
 .logoone{
     padding-top: 0.625em;
     margin-left: 0.625em;
     width: 6%;
+    background: #9FBCBB;
 }
 
 /* Contenido principal */
@@ -24,11 +31,12 @@ main{
     border: none;
     margin-top: 2em;
     text-transform: lowercase;
-    color: #4C656E;
+    color: #20884A;
     resize: none;
+    
 }
 
-::placeholder{ color: #4C656E;}
+::placeholder{ color: #20884A;}
 
 .mensaje:focus{outline: none;}
 
@@ -40,7 +48,7 @@ main{
     background-size: 40%;
     border: none;
     border-radius: 1.5em;
-    color: #4C656E;
+    color: #183131;
     /*margin: 1em 0 0 3em;*/
     margin-top: 2em;
     margin-left: 6.125em;
@@ -48,19 +56,11 @@ main{
     resize: none;
 }
 
-.receptor::placeholder:text-sm{
+.receptor::placeholder{
     color: #4C656E;
-    
-
 }
-.receptor::placeholder:first-child{
-    font-weight: bold;
-}
-
-.receptor:focus{outline: none;}
-
-.informacion, .texto_receptor{
-    color: #495057;
+.informacion{
+    color: #004E2C;
     font-size: 18px;
 }
 
@@ -70,35 +70,27 @@ main{
 }
 
 .boton_encriptar{
-    background:#0A3871;
+    background:#004E2C;
     cursor: pointer;
     height: 67px;
     width: 310px;
-    border: 1px solid #4C656E;
+    border: 1px solid #183131;
     border-radius: 20px;
     color: #FAF8FF;
 
 }
 
 .boton_desencriptar{
-    background:#A7AABD;
+    background:#9FBCBB;
     cursor: pointer;
     height: 67px;
     width: 310px;
-    border: 1px solid #0A3871;
+    border: 1px solid #183131;
     border-radius: 20px;
-    color: #0A3871;
+    color: #004E2C;
     margin-left: 1.8em;
 }
 
-.texto_receptor{
-    margin-left:30%;
-}
-.receptor_encontrar{
-    margin: 0;
-    padding: 0;
-    
-}
 
 .btncopiar{
     display: flex;
@@ -108,8 +100,7 @@ main{
 
 .texto_mensaje{
     font-size: 90%;
-    color:#0A3871;
-    color: #4C656E;
+    color:#004E2C;
     margin: 530px 0 0 0;
     position: fixed;
     margin-left: 6.125em;
@@ -117,19 +108,90 @@ main{
 }
 
 .copiar{
-    color:#0A3871;
-    cursor: pointer;
     height: 67px;
     width: 310px;
-    border: 1px solid #0A3871;
+    cursor: pointer;
+    border: 1px solid #183131;
     border-radius: 20px;
-    color: #4C656E;
+    color: #004E2C;
+    background:#9FBCBB;
     margin: 78px 0 0 400px;
     position: absolute;
-    visibility: hidden;
+    visibility: visible;
 }
 
-@media screen and (max-width:1174px){
+
+/* Pie de Página */
+.pie_pagina, .box, .red_social, .grupo_2{
+    width: 100%;
+    background-color: #9FBCBB;
+}
+.pie_pagina .grupo_1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:50px;
+    padding: 45px 0px;
+    background: #9FBCBB;
+}
+
+.pie_pagina .grupo_1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #9FBCBB;
+}
+.pie_pagina .grupo_1 .box figure img{
+    width: 200px;
+    background: #9FBCBB;
+}
+.pie_pagina .grupo_1 .box h2{
+    background: #9FBCBB;
+    color: #004E2C;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.pie_pagina .grupo_1 .box p{
+    background: #9FBCBB;
+    color: #004E2C;
+    margin-bottom: 10px;
+}
+.pie_pagina .grupo_1 .red_social a{
+    background: #9FBCBB;
+    display: inline-block;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    line-height: 45px;
+    color: #004E2C;
+    margin-right: 10px;
+    background-color: #9FBCBB;
+    text-align: center;
+    transition: all 300ms ease;
+}
+.pie_pagina .grupo_1 .red_social a:hover{
+    color: #0ac171;
+}
+.pie_pagina .grupo_2{
+    padding: 15px 10px;
+    text-align: center;
+    color: #004E2C;
+}
+.pie_pagina .grupo_2 small {
+    font-size: 15px;
+    background: #9FBCBB;
+}
+.pie_pagina .grupo_2 b {
+    background: #9FBCBB;
+
+}
+
+
+@media screen and (max-width:800px){
     *{
         font-size: 20px;
 
@@ -196,5 +258,12 @@ main{
         margin: 400px 0;
         height: 67px;
         width: 50%;
+    }
+
+    .pie_pagina .grupo_1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:30px;
+        padding: 35px 0px;
     }
 }
