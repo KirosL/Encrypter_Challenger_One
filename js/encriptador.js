@@ -58,6 +58,7 @@ function btndesencriptar(){
     receptor.value = "";
     receptor.style.backgroundImage = "url(./Images/Muñeco.png)";
     copiar.style.visibility="visible";
+}
 
 function copiarelemento(){
     const texto = document.getElementsByClassName("receptor");
