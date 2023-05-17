@@ -197,8 +197,7 @@ main{
     }
     main{
         margin:0;
-        width: auto;
-        display: block;
+
     }
 
     .mensaje{
@@ -265,12 +264,13 @@ main{
     }*/
     .pie_pagina{
         margin-top: 8em;
+        width: 107%;
     }
 
     .pie_pagina .grupo_1{
         height: 156px;
-        position: initial;
         background-color: #9FBCBB;
+        grid-gap: 24px;
     }
 
     .pie_pagina .grupo_1 figure img{
